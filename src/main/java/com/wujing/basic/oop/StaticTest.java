@@ -18,4 +18,6 @@ public class StaticTest {
              System.out.println("staticClass");
          }
      }
+
+
 }
