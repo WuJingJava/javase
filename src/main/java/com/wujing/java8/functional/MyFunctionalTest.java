@@ -76,6 +76,8 @@ public class MyFunctionalTest{
         };
         System.out.println(predicate.test(20));
 
+
+
     }
 
 
