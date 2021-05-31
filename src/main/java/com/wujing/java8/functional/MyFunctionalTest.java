@@ -2,9 +2,9 @@ package com.wujing.java8.functional;
 
 import org.junit.Test;
 
-import java.lang.annotation.Retention;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 /**
@@ -43,6 +43,9 @@ public class MyFunctionalTest{
 
     /**
      * @Description:  java 内置四大核心函数式接口
+     *  消费型接口 Consumer<T>  void accept(T t);
+     *  供给型接口Supplier<T>    T get();
+     *
      * @Param:
      * @return: void
      * @Author: liujiexin
@@ -60,6 +63,18 @@ public class MyFunctionalTest{
         Supplier<String> supplier = () -> "你好";
         System.out.printf("供给型：%s \n", supplier.get());
 
+        // 函数型接口 Function<T, R>
+        Function<String, String> function = (s1) -> {
+            return s1+"，哈哈哈哈哈哈";
+        };
+        System.out.println(function.apply("张三"));
+
+        // 判定型接口 Predicate<T>
+
+        Predicate<Integer> predicate = (a) ->{
+          return (a >= 27);
+        };
+        System.out.println(predicate.test(20));
 
     }
 
