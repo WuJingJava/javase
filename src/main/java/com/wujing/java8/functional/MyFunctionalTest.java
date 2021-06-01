@@ -45,7 +45,8 @@ public class MyFunctionalTest{
      * @Description:  java 内置四大核心函数式接口
      *  消费型接口 Consumer<T>  void accept(T t);
      *  供给型接口Supplier<T>    T get();
-     *
+     *  函数型接口 Function<T, R>
+     *   判定型接口 Predicate<T>
      * @Param:
      * @return: void
      * @Author: liujiexin
@@ -75,8 +76,6 @@ public class MyFunctionalTest{
           return (a >= 27);
         };
         System.out.println(predicate.test(20));
-
-
 
     }
 
